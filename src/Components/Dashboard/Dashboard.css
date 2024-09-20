@@ -1,0 +1,120 @@
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px; /* Added some horizontal padding */
+    border-bottom: 1px solid #ddd;
+    background-color: #f2f2f8;
+    width: 100%;
+    height: 116px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Adjust margin if needed */
+  }
+  
+  .logo img {
+    height: 100px;
+    width: 100px;
+  }
+  
+  .logo img:first-child {
+    margin-right: -30px; /* Adjust this value to control the space between the two images */
+  }
+  
+  
+  .vertical-line {
+    width: 1px;
+    height: 87px;
+    background-color: #000;
+    margin-left: 30px;
+    margin-left: 30px;
+  }
+  
+  .workspace {
+    font-size: 16px;
+    font-weight: 400;
+    color: #252C32;
+    margin-left: 30px; 
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+    margin-right: 32px;
+  }
+  
+  .dashboard-title {
+    text-align:right;
+    margin-left: 200px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #252C32;
+  }
+
+  .profile img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+  }
+  
+  .task-columns {
+    display: flex;
+    justify-content: space-around;
+    padding: 2px;
+    gap: 8px;
+    padding-bottom: 10px;
+  }
+  
+  .task-column {
+    width: 895px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 6px, 6px, 0px, 0px;
+    
+    
+  }
+  
+  .task-column h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #6E7C87;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  
+  .task-card {
+
+    background-color: #fff;
+    padding: 16px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-category {
+    display: inline-block;
+    padding: 3px 5px;
+    background-color: #F8DD4E;
+    border-radius: 3px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .task-code1 {
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #777;
+  }
+
+  .task-code2 {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #777;
+  }
