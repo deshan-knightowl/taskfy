@@ -50,7 +50,6 @@
     flex-direction: column;
     width: 300px;
     padding: 20px;
-    margin-top: 60px;
     align-self: center;
     align-content:center; 
     align-items: center;
@@ -178,4 +177,14 @@ button:hover {
     margin: 5px 0; 
     gap: 150px;
 
+}
+
+.anchor a,
+.anchor a:link,
+.anchor a:visited,
+.anchor a:hover,
+.anchor a:active,
+.anchor .link {
+    text-decoration: none; 
+    color: #4E8AFF;
 }
