@@ -11,22 +11,22 @@ const Dashboard = () => {
 
   const fetchTasks = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/tasks'); // Updated endpoint
-      if (!response.ok) throw new Error('Failed to fetch tasks'); // Check if the response is OK
+      const response = await fetch('http://localhost:5000/api/tasks');
+      if (!response.ok) throw new Error('Failed to fetch tasks');
       const data = await response.json();
-
+  
       // Filter tasks into respective categories
       const todo = data.filter(task => task.category === 'To Do');
       const inProgress = data.filter(task => task.category === 'In Progress');
       const done = data.filter(task => task.category === 'Done');
-
+  
       setTasks({ todo, inProgress, done });
     } catch (err) {
       console.error('Failed to fetch tasks:', err);
-      setError(err.message); // Set error message for display
+      setError(err.message);
     }
   };
-
+  
   return (
     <div className="dashboard">
       <header className="dashboard-header">
@@ -44,19 +44,21 @@ const Dashboard = () => {
       </header>
       {error && <div className="error-message">{error}</div>} {/* Display error message if any */}
       <div className="task-columns">
+        {/* To Do Column */}
         <div className="task-column">
           <h3>TO DO</h3>
           {tasks.todo.length > 0 ? (
             tasks.todo.map(task => (
               <div className="task-card" key={task._id}>
                 <p>{task.title}</p>
-                {task.priorityHigh && <img src="status.png" alt="priority" />}
+                {task.priorityHigh && <img src="status.png" alt="priority" />} {/* Priority indicator */}
               </div>
             ))
           ) : (
             <p>No tasks in this category.</p>
           )}
         </div>
+        {/* In Progress Column */}
         <div className="task-column">
           <h3>IN PROGRESS</h3>
           {tasks.inProgress.length > 0 ? (
@@ -69,6 +71,7 @@ const Dashboard = () => {
             <p>No tasks in this category.</p>
           )}
         </div>
+        {/* Done Column */}
         <div className="task-column">
           <h3>DONE</h3>
           {tasks.done.length > 0 ? (

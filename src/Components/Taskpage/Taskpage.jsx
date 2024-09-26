@@ -22,8 +22,9 @@ const CreateTaskPage = () => {
       deadline,
       assignedTo,
       priorityHigh,
+      category: 'To Do', // Ensure to include a category if applicable
     };
-  
+
     try {
       const response = await fetch('http://localhost:5000/api/tasks', {
         method: 'POST',
@@ -32,11 +33,11 @@ const CreateTaskPage = () => {
         },
         body: JSON.stringify(taskData),
       });
-  
+
       if (response.ok) {
         const createdTask = await response.json();
         console.log('Task created:', createdTask);
-        // Optionally, reset the form or provide feedback
+        navigate('/dashboard'); // Redirect to the Dashboard
       } else {
         console.error('Failed to create task:', response.status);
       }
